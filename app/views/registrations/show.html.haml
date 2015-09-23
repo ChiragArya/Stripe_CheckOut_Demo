@@ -14,6 +14,14 @@
 %p
   %strong Telephone:
   = @registration.telephone
+%p
+  %strong Customer Token:
+  = @registration.customer_id
+  - unless @registration.end_date.blank?
+  %p
+    %strong Plan End date:
+    = @registration.end_date
+
 = link_to 'Edit', edit_registration_path(@registration)
 |
 \#{link_to 'Back', registrations_path}

@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   resources :courses
 
   root "courses#index"
+
+  post "registrations/hook"
+  
 end
