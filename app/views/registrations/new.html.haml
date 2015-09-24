@@ -25,8 +25,8 @@
           .field
             = f.label :telephone
             = f.text_field :telephone
-
-            //‘Stripe.js’ will recognize the card data because we have marked the inputs with ‘data-stripe’ attribute as: number, cvv, exp-month and exp-year.
+            
+            /‘Stripe.js’ will recognize the card data because we have marked the inputs with ‘data-stripe’ attribute as: number, cvv, exp-month and exp-year.
             = javascript_include_tag "https://js.stripe.com/v2/"
             :javascript
               Stripe.setPublishableKey('#{Rails.application.secrets.stripe_publishable_key}');
